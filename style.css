@@ -34,16 +34,22 @@ nav ul {
 nav h1 {
   font-size: x-large;
 }
-.btn-primary {
-  height: 64px;
-  border-radius: 5px;
-  background: #fd6e0a;
-  color: #ffffff;
+.btn-primary{
   font-weight: 700px;
   font-size: 20px;
   border: 0;
   padding: 18px 35px;
   line-height: 27.24px;
+  height: 64px;
+  border-radius: 5px;
+  background-color: aquamarine;
+}
+.btn-primary:hover{
+
+
+  background: #fd6e0a;
+  color: #ffffff;
+
 }
 .banner h3{
     color: #474747;
@@ -124,7 +130,7 @@ font-size: 20px;
  font-size: 20px;
  color: #474747;
 }
-
+/* what i do section */
 .what-i-do{
     margin-top: 130px;
 border-radius: 10px;
@@ -161,19 +167,26 @@ border-radius: 5px;
 padding: 15px 15px ;
 
 }
+.skills:hover{
+  transform: scale(1.5);
+  background-color:beige;
+  transition: transform 1s;
+}
+/* what i do section */
+
+/* resume section start */
 .resume-section{
   margin-top: 130px;
 }
 .resume{
   display: flex;
-  gap: 24px;
+  gap: 15px;
 }
 .resume-title{
-  font-family: 'Open Sans';
+font-family: 'Open Sans';
 font-style: normal;
 font-weight: 700;
 font-size: 30px;
-line-height: 41px;
 color: #474747;
 }
 .resume-item{
@@ -208,11 +221,17 @@ margin-bottom: 30px;
 }
 .resume-button{
   margin-top: 50px;
+  padding-bottom: 20px;
   text-align: center;
 }
+/* resume section end */
+
+
+/* contact section start */
 .contact{
   display: flex;
   gap: 100px;
+  flex:1;
   padding: 130px 200px;
   
 background: #FFF8F3;
@@ -225,10 +244,62 @@ background: #FFF8F3;
   width: 100%;
   padding:18px 30px;
 }
+.formal{
+  width: 50%;
+}
 
 input{
   height: 30px;
 }
 .contact a{
   text-decoration: none;
+}
+/* contact section end */
+
+/* responsive by media query start*/
+.hide{
+  display:none;
+}
+
+@media screen and (max-width:576px) {
+.nav,.banner,.contact,.skills-container,.aboutme,.about-info-container{
+  flex-direction: column;
+  padding: 10px 10px ;
+  gap: 20px;
+}
+.formal{
+  width: 80%;
+}
+.contact input[type="text"], input[type="email"], textarea {
+  padding: 10px 0px;
+}
+.section-title{
+  margin-bottom: 10px;
+}
+.resume{
+  flex-direction: column;
+}
+.what-i-do{
+  padding:0;
+  text-align: left;
+}
+.skills:hover{
+  transform: scale(1.1);
+}
+nav ul {
+  flex-direction: column;
+  gap: 15px;
+  padding: 0;
+  align-items: flex-start;
+}
+nav li {
+  margin-left: 0px;
+}
+nav{
+flex-direction: column;
+padding: 0;
+}
+.header{
+margin:0px;
+}
 }
